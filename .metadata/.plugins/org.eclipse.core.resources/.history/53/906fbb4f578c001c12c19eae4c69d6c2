@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Fluxo</name>
+  <uuid>62682269-6aef-4b69-af38-2c0631542637</uuid>
+  <locale>pt_BR</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Planilha de promocao" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="a435aca9-81b9-4f89-ba55-e40ce55f9f3b"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Regra 1" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="18753034-9be8-4df4-9cbe-b39074629d4e"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Validando Nome do Produto" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="baf96a8e-448a-4a2b-90f3-20e7fc79e218"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Validando Descrição do Produto" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="d2cd786e-b76d-4613-a945-198a51c7fa3c"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Validando Fabricante do Produto" Ordering="Default"/>
+      <StopTask Identifier="task_3"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="Planilha de promocao"/>
+      <TaskNode Identifier="node_2" Task="Regra 1"/>
+      <TaskNode Identifier="node_3" Task="task_3"/>
+      <TaskNode Identifier="node_4" Task="Validando Nome do Produto"/>
+      <TaskNode Identifier="node_5" Task="Validando Descrição do Produto"/>
+      <TaskNode Identifier="node_6" Task="Validando Fabricante do Produto"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_1"/>
+      <Transition Identifier="transition_2" Source="node_1" Target="node_2"/>
+      <Transition Identifier="transition_4" Source="node_2" Target="node_4"/>
+      <Transition Identifier="transition_6" Source="node_2" Target="node_3">
+        <Conditions Language="bal"><![CDATA[não é verdadeiro que ValidaPromocao é valida promocao ]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_1" Source="node_4" Target="node_5"/>
+      <Transition Identifier="transition_3" Source="node_5" Target="node_6"/>
+      <Transition Identifier="transition_5" Source="node_6" Target="node_3"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="pt_BR">
+      <Data Name="node_2#height">59.311127</Data>
+      <Data Name="node_4#width">239.80023</Data>
+      <Data Name="node_1#height">65.78432</Data>
+      <Data Name="node_3#height">19.999987</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_4#height">51.176117</Data>
+      <Data Name="node_5#name">node_1</Data>
+      <Data Name="node_2#name">node_1</Data>
+      <Data Name="node_5#height">54.270172</Data>
+      <Data Name="node_6#height">57.579346</Data>
+      <Data Name="transition_6#label">não é verdadeiro que ValidaPromocao é valida promocao</Data>
+      <Data Name="node_2#width">302.9734</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_3#y">619.1211</Data>
+      <Data Name="node_4#x">243.90012</Data>
+      <Data Name="node_4#y">321.68353</Data>
+      <Data Name="node_5#x">243.37817</Data>
+      <Data Name="node_5#y">391.40668</Data>
+      <Data Name="node_6#x">244.62665</Data>
+      <Data Name="node_5#width">231.24524</Data>
+      <Data Name="node_6#y">467.33142</Data>
+      <Data Name="node_0#x">151.48676</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_1#x">151.48674</Data>
+      <Data Name="node_1#y">103.89216</Data>
+      <Data Name="node_2#x">151.48677</Data>
+      <Data Name="node_2#y">216.43988</Data>
+      <Data Name="node_3#x">151.48676</Data>
+      <Data Name="transition_4#label">é verdadeiro que ValidaPromocao é valida promocao</Data>
+      <Data Name="node_1#name">node_1</Data>
+      <Data Name="node_3#width">19.999985</Data>
+      <Data Name="node_4#name">node_1</Data>
+      <Data Name="node_1#width">302.9735</Data>
+      <Data Name="node_6#name">node_1</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_6#width">234.75366</Data>
+      <Data Name="node_3#name">node_2</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow>
+</rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><ImpactedElements>
+    <Rule id="a435aca9-81b9-4f89-ba55-e40ce55f9f3b" path="regras/Tabela de Promocao.dta">
+        <UserFlow id="62682269-6aef-4b69-af38-2c0631542637"/>
+    </Rule>
+    <Rule id="d2cd786e-b76d-4613-a945-198a51c7fa3c" path="regras/Regra3_validaDescricaoProduto.brl">
+        <UserFlow id="62682269-6aef-4b69-af38-2c0631542637"/>
+    </Rule>
+    <Rule id="18753034-9be8-4df4-9cbe-b39074629d4e" path="regras/Regra1_encontraProduto.brl">
+        <UserFlow id="62682269-6aef-4b69-af38-2c0631542637"/>
+    </Rule>
+    <Rule id="0ef4037f-1333-4fc6-a4cb-1f2eb6a026c7" path="regras/Regra4_validaFabricanteProduto.brl">
+        <UserFlow id="62682269-6aef-4b69-af38-2c0631542637"/>
+    </Rule>
+    <Rule id="baf96a8e-448a-4a2b-90f3-20e7fc79e218" path="regras/Regra2_validaNomeProduto.brl">
+        <UserFlow id="62682269-6aef-4b69-af38-2c0631542637"/>
+    </Rule>
+</ImpactedElements>
